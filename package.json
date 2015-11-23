@@ -1,0 +1,53 @@
+{
+  "name": "somefilter",
+  "version": "1.0.0",
+  "description": "Right-to-left conditional function composition. Get some result of filter functions calls.",
+  "main": "lib/somefilter.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "jscs": "jscs --esnext src test",
+    "jshint": "jshint src test",
+    "codestyle": "npm-run-all jshint jscs",
+    "build": "npm-run-all clean 6to5 bundle bundle:es6 minify",
+    "minify": "minify dist/somefilter.js > dist/somefilter.min.js",
+    "6to5": "babel -d lib src",
+    "wisdom": "npm run build",
+    "jscs-fix": "npm run jscs --fix",
+    "clean": "rimraf lib/* dist/*",
+    "bundle:base": "browserify -s somefilter --ng false",
+    "bundle": "npm run bundle:base -- -r ./lib/somefilter.js:somefilter ./lib/somefilter.js -o dist/somefilter.js",
+    "bundle:es6:base": "npm run bundle:base -- -r ./src/somefilter.js:somefilter ./src/somefilter.js",
+    "bundle:es6": "npm run bundle:es6:base -- -o dist/somefilter.es6.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/somefilter.git"
+  },
+  "keywords": [
+    "compose",
+    "function",
+    "functional",
+    "filter",
+    "some"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/somefilter/issues"
+  },
+  "homepage": "https://github.com/coderaiser/somefilter",
+  "devDependencies": {
+    "babel-cli": "^6.1.1",
+    "babel-preset-es2015": "^6.0.15",
+    "browserify": "^12.0.1",
+    "jscs": "^2.4.0",
+    "jshint": "^2.8.0",
+    "npm-run-all": "^1.2.12",
+    "rimraf": "^2.4.3",
+    "tape": "^4.2.0"
+  },
+  "dependencies": {
+    "apart": "~1.0.1",
+    "squad": "~1.1.3"
+  }
+}

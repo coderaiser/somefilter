@@ -1,0 +1,29 @@
+{
+  "name": "somefilter",
+  "version": "1.0.0",
+  "homepage": "https://github.com/coderaiser/somefilter",
+  "authors": [
+    "coderaiser <mnemonic.enemy@gmail.com>"
+  ],
+  "description": "Right-to-left conditional function composition. Get some result of filter functions calls.",
+  "main": "lib/somefilter.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "compose",
+    "function",
+    "functional",
+    "filter",
+    "some"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
