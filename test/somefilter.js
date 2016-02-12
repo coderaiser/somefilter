@@ -58,4 +58,11 @@
         t.throws(fn, /fn should be function!/, 'should throw when filter not a function');
         t.end();
     });
+    
+    test('arguments: empty array of filters', t => {
+        let fn  = () => somefilter([]);
+       
+        t.throws(fn, /fn should be function!/, 'should throw when filter not a function');
+        t.end();
+    });
 })();
