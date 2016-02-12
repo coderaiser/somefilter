@@ -36,9 +36,6 @@ function somefilter(condition, filters) {
 function store(condition) {
     let cache;
    
-    if (!condition)
-       condition = notEmpty;
-    
     return value => {
        let result;
        
