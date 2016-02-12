@@ -51,4 +51,11 @@
         t.throws(fn, /condition should be function!/, 'should throw when condition not function');
         t.end();
     });
+    
+    test('arguments: filter on a function', t => {
+        let fn  = () => somefilter([() => {}, 'not a function']);
+       
+        t.throws(fn, /fn should be function!/, 'should throw when filter not a function');
+        t.end();
+    });
 })();
