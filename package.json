@@ -1,6 +1,6 @@
 {
   "name": "somefilter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Right-to-left conditional function composition. Get some result of filter functions calls.",
   "main": "lib/somefilter.js",
   "scripts": {

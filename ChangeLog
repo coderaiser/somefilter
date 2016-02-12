@@ -1,0 +1,11 @@
+2016.02.12, v1.0.1
+
+feature:
+- (gitignore) .nyc_output
+- (somefilter) store: rm extra check
+- (package) nyc: ~ -> ^
+- (package) coveralls v2.11.6
+- (package) add coverage report
+- (package) browserify v13.0.0
+- (travis) nodejs: 4 -> 5
+
