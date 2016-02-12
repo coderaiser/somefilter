@@ -1,4 +1,4 @@
-# somefilter [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
+# somefilter [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
 Right-to-left conditional function composition. Get [some][someURL] result of [filter][filterURL] functions call.
 
@@ -42,6 +42,9 @@ MIT
 [BuildStatusURL]:           https://travis-ci.org/coderaiser/somefilter  "Build Status"
 [DependencyStatusURL]:      https://gemnasium.com/coderaiser/somefilter "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
+
+[CoverageURL]:              https://coveralls.io/github/coderaiser/somefilter?branch=master
+[CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/somefilter/badge.svg?branch=master&service=github
 
 [someURL]:                  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 [filterURL]:                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
