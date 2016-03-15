@@ -1,3 +1,9 @@
+2016.03.15, v1.0.2
+
+fix:
+- (package) add minify
+
+
 2016.02.12, v1.0.1
 
 feature:
