@@ -12,14 +12,14 @@ bower i somefilter --save
 ## How to use?
 
 ```js
-let somefilter  = require('somefilter');
-let notEmpty    = array => array.length;
-let find        = (array, condition) => array.filter(condition);
+const somefilter  = require('somefilter');
+const notEmpty    = (array) => array.length;
+const find        = (array, condition) => array.filter(condition);
 
-let findZero    = array => find(array, a => !a);
-let findPositive= array => find(array, a => a > 0);
+const findZero    = array => find(array, a => !a);
+const findPositive= array => find(array, a => a > 0);
 
-let findNumbers = somefilter(notEmpty, [findPositive, findZero]);
+const findNumbers = somefilter(notEmpty, [findPositive, findZero]);
 
 findNumbers([1, 2, -1, -3]);
 // returns
