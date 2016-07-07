@@ -13,7 +13,7 @@ bower i somefilter --save
 
 ```js
 const somefilter  = require('somefilter');
-const notEmpty    = (array) => array.length;
+const notEmpty    = ({length} = 0) => length;
 const find        = (array, condition) => array.filter(condition);
 
 const findZero    = array => find(array, a => !a);
