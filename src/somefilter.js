@@ -1,10 +1,10 @@
 'use strict';
 
-let squad       = require('squad');
-let apart       = require('apart');
+const squad = require('squad/legacy');
+const apart = require('apart');
 
-let unary       = fn => value => fn(value);
-let notEmpty    = value => !!value;
+const unary = fn => value => fn(value);
+const notEmpty = value => !!value;
 
 module.exports = somefilter;
 
@@ -16,10 +16,10 @@ function somefilter(condition, filters) {
     
     checkAll(condition, filters);
     
-    let storify = store(condition);
-    let process = apart(squad, condition, storify);
+    const storify = store(condition);
+    const process = apart(squad, condition, storify);
     
-    let processingFilters = filters
+    const processingFilters = filters
         .map(unary(process))
         .reverse();
     
@@ -62,20 +62,20 @@ function checkAll(condition, filters) {
 }
 
 function check(type, array) {
-    let getType     = item => typeof item,
-        notEqual    = (a, b) => a !== b,
-        wrong       = type => {
-            throw Error(`fn should be ${ type }!`);
-        },
-        
-        wrongType   = apart(wrong, type),
-        notType     = apart(notEqual, type);
+    const getType = item => typeof item;
+    const notEqual = (a, b) => a !== b;
+    const wrong = type => {
+        throw Error(`fn should be ${ type }!`);
+    };
+    
+    const wrongType = apart(wrong, type);
+    const notType = apart(notEqual, type);
     
     if (!array.length)
-        wrongType(type);
-    else
-        array
-            .map(getType)
-            .filter(notType)
-            .forEach(wrongType);
+        return wrongType(type);
+    
+    array
+        .map(getType)
+        .filter(notType)
+        .forEach(wrongType);
 }
