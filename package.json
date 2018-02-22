@@ -7,7 +7,7 @@
     "test": "tape test/*.js",
     "lint": "eslint lib test",
     "build": "babel lib -d legacy",
-    "wisdom": "npm run build legacy",
+    "wisdom": "redrun build legacy",
     "coverage": "nyc npm test",
     "report": "nyc report --reporter=text-lcov | coveralls",
     "legacy": "echo \"module.exports = require('./somefilter');\" > legacy/index.js"
