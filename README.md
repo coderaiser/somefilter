@@ -6,18 +6,17 @@ Right-to-left conditional function composition. Get [some][someURL] result of [f
 
 ```
 npm i somefilter --save
-bower i somefilter --save
 ```
 
 ## How to use?
 
 ```js
-const somefilter  = require('somefilter');
-const notEmpty    = ({length} = 0) => length;
-const find        = (array, condition) => array.filter(condition);
+const somefilter = require('somefilter');
+const notEmpty = ({length} = 0) => length;
+const find = (array, condition) => array.filter(condition);
 
-const findZero    = array => find(array, a => !a);
-const findPositive= array => find(array, a => a > 0);
+const findZero = array => find(array, a => !a);
+const findPositive = array => find(array, a => a > 0);
 
 const findNumbers = somefilter(notEmpty, [findPositive, findZero]);
 
@@ -28,6 +27,14 @@ findNumbers([1, 2, -1, -3]);
 findNumbers([1, 2, -1, -3, 0, 0, 0]);
 // returns
 [0, 0, 0];
+```
+
+## Environments
+
+In old `node.js` environments that not fully supports `es2015`, `somefilter` could be used with:
+
+```js
+var somefilter = require('somefilter/legacy');
 ```
 
 ## License

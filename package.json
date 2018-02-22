@@ -5,21 +5,12 @@
   "main": "lib/somefilter.js",
   "scripts": {
     "test": "tape test/*.js",
-    "jscs": "jscs --esnext src test",
-    "jshint": "jshint src test",
-    "codestyle": "redrun jshint jscs",
-    "build": "redrun clean 6to5 bundle bundle:es6 minify",
-    "minify": "minify dist/somefilter.js > dist/somefilter.min.js",
-    "6to5": "babel -d lib src",
-    "wisdom": "npm run build",
-    "jscs-fix": "npm run jscs --fix",
-    "clean": "rimraf lib/* dist/*",
-    "bundle:base": "browserify -s somefilter --ng false",
-    "bundle": "npm run bundle:base -- -r ./lib/somefilter.js:somefilter ./lib/somefilter.js -o dist/somefilter.js",
-    "bundle:es6:base": "npm run bundle:base -- -r ./src/somefilter.js:somefilter ./src/somefilter.js",
-    "bundle:es6": "npm run bundle:es6:base -- -o dist/somefilter.es6.js",
+    "lint": "eslint lib test",
+    "build": "babel lib -d legacy",
+    "wisdom": "npm run build legacy",
     "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls"
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "legacy": "echo \"module.exports = require('./somefilter');\" > legacy/index.js"
   },
   "repository": {
     "type": "git",
@@ -41,18 +32,15 @@
   "devDependencies": {
     "babel-cli": "^6.1.1",
     "babel-preset-env": "^1.6.1",
-    "browserify": "^16.0.0",
     "coveralls": "^3.0.0",
-    "jscs": "^3.0.1",
-    "jshint": "^2.8.0",
-    "minify": "^3.0.0",
+    "eslint": "^4.18.1",
     "nyc": "^11.0.2",
     "redrun": "^5.0.1",
-    "rimraf": "^2.4.3",
     "tape": "^4.2.0"
   },
   "dependencies": {
-    "apart": "~1.0.1",
+    "apart": "^1.0.1",
+    "currify": "^2.0.6",
     "squad": "^2.0.0"
   }
 }

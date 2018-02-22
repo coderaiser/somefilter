@@ -1,6 +1,6 @@
 'use strict';
 
-const somefilter = require('../src/somefilter');
+const somefilter = require('..');
 const apart = require('apart');
 const test = require('tape');
 
