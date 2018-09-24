@@ -41,6 +41,6 @@
   "dependencies": {
     "apart": "^1.0.1",
     "currify": "^2.0.6",
-    "squad": "^2.0.0"
+    "squad": "^3.0.0"
   }
 }
