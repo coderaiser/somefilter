@@ -40,7 +40,7 @@
     "tape": "^4.2.0"
   },
   "dependencies": {
-    "apart": "^1.0.1",
+    "apart": "^2.0.0",
     "currify": "^2.0.6",
     "squad": "^3.0.0"
   }
