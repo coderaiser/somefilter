@@ -29,14 +29,6 @@ findNumbers([1, 2, -1, -3, 0, 0, 0]);
 [0, 0, 0];
 ```
 
-## Environments
-
-In old `node.js` environments that not fully supports `es2015`, `somefilter` could be used with:
-
-```js
-var somefilter = require('somefilter/legacy');
-```
-
 ## License
 
 MIT

@@ -4,13 +4,11 @@
   "description": "Right-to-left conditional function composition. Get some result of filter functions calls.",
   "main": "lib/somefilter.js",
   "scripts": {
-    "test": "tape test/*.js",
-    "lint": "eslint lib test",
-    "build": "babel lib -d legacy",
-    "wisdom": "redrun build legacy",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "legacy": "echo \"module.exports = require('./somefilter');\" > legacy/index.js"
+    "test": "madrun test",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "repository": {
     "type": "git",
@@ -30,18 +28,22 @@
   },
   "homepage": "https://github.com/coderaiser/somefilter",
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "coveralls": "^3.0.0",
-    "eslint": "^5.6.0",
-    "nyc": "^13.0.1",
+    "eslint": "^6.3.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-putout": "^2.0.0",
+    "madrun": "^3.0.3",
+    "nyc": "^14.1.1",
+    "putout": "^5.27.0",
     "redrun": "^7.0.0",
-    "tape": "^4.2.0"
+    "supertape": "^1.2.3"
   },
   "dependencies": {
     "apart": "^2.0.0",
     "currify": "^3.0.0",
     "squad": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8.3.0"
   }
 }
