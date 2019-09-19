@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "apart": "^2.0.0",
-    "currify": "^3.0.0",
+    "currify": "^4.0.0",
     "squad": "^3.0.0"
   },
   "engines": {
